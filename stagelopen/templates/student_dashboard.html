@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<body class="text-center h-100">
+  
+
+    <div class="container h-100">
+      <br><br>
+      <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-10 col-md-8 col-lg-6">
+
+            &nbsp
+            &nbsp
+<br><h1> Stages van {{ current_user.username }}</h1>
+<section>&nbsp
+<h2>Mijn stages</h2>
+
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Instelling</th>
+        <th scope="col">Begeleider</th>
+        <th scope="col">Cijfer</th>
+        <th scope="col">Periode</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for stage in stages %}
+      <tr>
+          <td>{{ stage.instelling_id }}</td>
+          <td>{{ stage.begeleider_id }}</td>
+          <td>{{ stage.cijfer }}</td>
+          <td>{{ stage.periode }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+</div>
+      </div>
+    </div>
+    </body>
+
+  {% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+  <br><br><br><h1>Edit Stage</h1>
+  <form method="POST" action="{{ url_for('stage.edit_stage', stage_id=stage.id) }}">
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.student_id.label }}<br>
+      {{ form.student_id }}
+    </p>
+    <p>
+      {{ form.instelling_id.label }}<br>
+      {{ form.instelling_id }}
+    </p>
+    <p>
+      {{ form.begeleider_id.label }}<br>
+      {{ form.begeleider_id }}
+    </p>
+    <p>
+      {{ form.cijfer.label }}<br>
+      {{ form.cijfer }}
+    </p>
+    <p>
+      {{ form.periode.label }}<br>
+      {{ form.periode }}
+    </p>
+    <p>{{ form.submit }}</p>
+  </form>
+{% endblock %}
+
+

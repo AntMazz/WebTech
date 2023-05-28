@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6">
+          <br><br><br><h1>Add Stage</h1>
+  <form method="POST" action="{{ url_for('stage.add_stage') }}">
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.student_id.label }}<br>
+      {{ form.student_id(placeholder='email') }}
+    </p>
+    <p>
+      {{ form.instelling_id.label }}<br>
+      {{ form.instelling_id(placeholder='naam instelling') }}
+    </p>
+    <p>
+      {{ form.begeleider_id.label }}<br>
+      {{ form.begeleider_id(placeholder='naam begeleider') }}
+    </p>
+    <p>
+      {{ form.cijfer.label }}<br>
+      {{ form.cijfer(placeholder='cijfer') }}
+    </p>
+    <p>
+      {{ form.periode.label }}<br>
+      {{ form.periode(placeholder='semester, jaar') }}
+    </p>
+    <p>{{ form.submit }}</p>
+  </form>
+
+        
+
+      
+{% endblock %}

@@ -1,0 +1,27 @@
+html,
+body {
+    height: 100%;
+    font-size: 1rem;
+    font-family: 'Merriweather', serif;
+}
+
+.gradient {
+    background: rgb(224,141,64);
+    background: linear-gradient(90deg, 
+    rgba(224,141,64,1) 0%, 
+    rgba(30,20,201,1) 0%, 
+    rgba(115,121,240,1) 54%, 
+    rgba(192,217,238,1) 100%, 
+    rgba(102,149,179,1) 100%, 
+    rgba(0,212,255,1) 100%, 
+    rgba(255,0,54,1) 137%); 
+}
+
+
+.page-header {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: white;
+    height: auto;
+    
+}

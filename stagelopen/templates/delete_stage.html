@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<br><br><br>
+    <h2>Delete Stage</h2>
+     <form method="POST">
+        {{ form.hidden_tag() }}
+        <br><p>Are you sure you want to delete stage {{student_id}} ?</p>
+        
+        <div class="col-0.5 btn btn-primary align-items-right">
+        {{ form.submit(class="form-control col-2 btn btn-primary align-items-center ", size=2) }}
+    </div>
+        <a href="{{ url_for('users.dashboard') }}" class="btn btn-sm-secondary">Cancel</a
+    </form>
+
+{% endblock %}

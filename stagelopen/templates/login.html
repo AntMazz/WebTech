@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+
+
+    
+
+<body class="text-center h-100">
+    &nbsp
+    &nbsp
+    &nbsp
+  
+  <div class="container h-100">
+      <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-10 col-md-8 col-lg-6">
+            &nbsp;
+<form class="form-signin form-control-sm" method="post">
+  <img class="mb-4" src="./static/graduate.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Inloggen</h1>
+    
+<form class="row g-3" method="POST">
+  {# This hidden_tag is a CSRF security feature. #}
+  {{ form.hidden_tag() }}
+  {{form.role.label}} {{form.role() }}
+  &nbsp
+  <div class="form-group row g-3 align-items-center">
+    &nbsp
+
+  {{ form.email.label }} {{ form.email(placeholder='Email') }}</div>
+  &nbsp
+  <div class="form-group row g-3 align-items-center">
+  
+  {{ form.password.label }} {{ form.password(placeholder='Password') }}</div>
+  &nbsp
+  <br>
+  <div class="col-3 btn btn-primary align-items-right">
+    
+
+  {{ form.submit(class="form-control col-2 btn btn-primary align-items-center ", size=6) }}</div>
+  
+</form>
+
+{% endblock %}
+                
